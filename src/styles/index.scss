@@ -1,0 +1,123 @@
+@import "./variables";
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: lighter;
+
+    color: $text-color;
+}
+
+a {
+    text-decoration: none;
+    color: $text-color;
+}
+
+button {
+    color: $text-color;
+    display: inline-block;
+    border: 1px solid $text-color;
+    padding: $button-padding;
+    background-color: $button-color;
+    transition: background-color $transition-duration;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $button-color-opaque;
+        transition: background-color $transition-duration;
+    }
+}
+
+.nav-list, .header-block, .about-me-block {
+    margin: 0 auto;
+    max-width: $full-width;
+    width: $full-width;
+    display: block;
+}
+
+.body-block {
+    padding: $block-padding;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: $dark-bg-color;
+}
+
+.nav-list {
+    padding: $navlist-padding;
+    text-align: left;
+}
+
+.nav-list-object {
+    display: inline-block;
+    margin-left: $navlink-margin-left;
+
+    &:not(:last-child)::after {
+        content: "|";
+        margin-left: $navlink-margin-left;
+    }
+}
+
+.nav-list-link {
+    color: $light-bg-color;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: $header-height;
+    background: url(../assets/bg.jpg) 100vw;
+}
+
+.header-block {
+    border-left: 3px $title-color solid;
+    text-align: left;
+}
+
+.header-content {
+    margin: 5px 0 5px 40px;
+
+    &.header-title {
+        font-size: $font-xl;
+    }
+}
+
+.about-me {
+    background-color: $light-bg-color;
+}
+
+.about-me-block {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.about-me-image, .about-me-text {
+    flex: 1 0 50%; 
+}
+
+.about-me-content {
+    padding-top: 50px;
+}
+
+.about-me-title-block {
+    position: absolute; 
+
+    color: $light-bg-color;
+    font-size: $font-xl;
+    text-align: left;
+
+    background-color: $dark-bg-color;
+    padding: 8px 0 8px 30px;
+    
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+
+    width: 40%;
+    right: 0;
+
+}

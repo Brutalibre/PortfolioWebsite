@@ -1,0 +1,15 @@
+.MainContainer {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.ParallaxContainer {
+  display: flex;
+  flex: 1 0 auto;
+  position: relative;
+  transform: translateZ(-1px) scale(2) translateX(-4px) translateY(-60px);
+  z-index: -1;
+}
