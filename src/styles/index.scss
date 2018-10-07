@@ -1,5 +1,6 @@
 @import "./variables";
 
+// BASE ITEMS
 html, body {
     height: 100%;
     width: 100%;
@@ -9,6 +10,10 @@ html, body {
     font-weight: lighter;
 
     color: $text-color;
+}
+
+p {
+    margin: 0;
 }
 
 a {
@@ -31,7 +36,30 @@ button {
     }
 }
 
-.nav-list, .header-block, .about-me-block {
+// UTILS
+.breaker {
+    display: block;
+    width: 100vw;
+    height: 1px;
+}
+
+.paragraph {
+    margin-bottom: 25px;
+    text-align: justify;
+}
+.text-hover {
+    opacity: 0;
+    transition: opacity $transition-duration;
+
+    &:hover {
+        opacity: 1;
+        transition: opacity $transition-duration;
+    }
+}
+
+
+// SPECIFIC
+.nav-list, .header-block, .about-me-block, .my-projects-block {
     margin: 0 auto;
     max-width: $full-width;
     width: $full-width;
@@ -83,7 +111,7 @@ button {
     margin: 5px 0 5px 40px;
 
     &.header-title {
-        font-size: $font-xl;
+        font-size: $font-xxl;
     }
 }
 
@@ -100,8 +128,8 @@ button {
     flex: 1 0 50%; 
 }
 
-.about-me-content {
-    padding-top: 50px;
+.about-me-content, .about-me-image {
+    padding-top: 70px;
 }
 
 .about-me-title-block {
@@ -113,11 +141,103 @@ button {
 
     background-color: $dark-bg-color;
     padding: 8px 0 8px 30px;
-    
+
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
 
-    width: 40%;
+    width: 35%;
     right: 0;
+}
 
+.about-me-image {
+    position: relative;
+
+    .image {
+        width: 80%;
+        border-radius: 100%;
+
+        -webkit-box-shadow: -50px -50px 0px 0px rgba(0,0,0,0.3);
+        -moz-box-shadow: -50px -50px 0px 0px rgba(0,0,0,0.3);
+        box-shadow: -50px -50px 0px 0px rgba(0,0,0,0.3);
+    }
+}
+
+.my-projects {
+    background-color: $dark-bg-color;
+    color: $light-bg-color;
+}
+
+.project-title {
+    font-size: $font-xxl;
+    margin-bottom: 50px;
+
+    position: relative;
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        width: 35%;
+        height: 1px;
+
+        background-color: $light-bg-color;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        width: 35%;
+        height: 1px;
+
+        background-color: $light-bg-color;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.projects-grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.project-item {
+    position: relative;
+    max-height: 350px;
+    margin-bottom: 20px;
+
+    .text-hover {
+        color: $text-color;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        padding: $grid-padding;
+        background-color: $caption-color;
+    }
+
+
+    img {
+        width: 100%;
+        max-height: 100%;
+    }
+
+    &.item-rect {
+        width: 60%;
+    }
+
+    &.item-square {
+        width: 33%;
+    }
+
+    &.item-fill {
+        width: 2%;
+        background-color: $light-bg-color;
+    }
 }
