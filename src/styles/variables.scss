@@ -1,14 +1,14 @@
 // Colors
 $text-color: #5D5D5C;
-$dark-bg-color: #7B3C3C;
+$dark-bg-color: #2E102C;
 $light-bg-color: #F0F0E4;
-$title-color: #DB5F29;
-$emphasis-color: #3BAAD6;
+$title-color: #CB213C;
+$emphasis-color: #830034;
 
-$button-color: #F0F0E444;
-$button-color-opaque: #F0F0E4FF;
+$button-color: #83003444;
+$button-color-opaque: #830034FF;
 
-$caption-color: #F0F0E4CC;
+$caption-color: #2E102CCC;
 
 // Widths
 $full-width: 1080px;
@@ -23,10 +23,16 @@ $block-padding: 50px 0;
 $button-padding: 5px 10px;
 
 $grid-padding: 10px;
+$grid-item-padding: 30px;
 
 // Fonts
+$font-normal: 1.05em;
+$font-medium: 1.2em;
 $font-xl: 2em;
 $font-xxl: 3em;
 
+$font-weight-normal: 400;
+$font-weight-thin: 200;
+
 // Transitions
-$transition-duration: 0.3s;
+$transition-duration: 0.2s;

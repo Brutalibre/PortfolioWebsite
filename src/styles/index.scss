@@ -4,12 +4,13 @@
 html, body {
     height: 100%;
     width: 100%;
-    font-size: 100%;
+    font-size: $font-normal;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    font-weight: lighter;
+    font-weight: $font-weight-thin;
 
     color: $text-color;
+    background-color: $light-bg-color;
 }
 
 p {
@@ -22,17 +23,25 @@ a {
 }
 
 button {
-    color: $text-color;
     display: inline-block;
-    border: 1px solid $text-color;
+
+    color: $light-bg-color;
+    font-weight: $font-weight-thin;
+
+    border: 1px solid;
+    border-color: $text-color;
+
     padding: $button-padding;
     background-color: $button-color;
-    transition: background-color $transition-duration;
+
+    transition: background-color $transition-duration ease-in-out, border-color $transition-duration ease-in-out;
+
 
     &:hover {
         cursor: pointer;
         background-color: $button-color-opaque;
-        transition: background-color $transition-duration;
+        border-color: $light-bg-color;
+        transition: background-color $transition-duration ease-in-out, border-color $transition-duration ease-in-out;
     }
 }
 
@@ -43,20 +52,15 @@ button {
     height: 1px;
 }
 
+.emphasis {
+    font-weight: $font-weight-normal;
+    color: $emphasis-color;
+}
+
 .paragraph {
     margin-bottom: 25px;
     text-align: justify;
 }
-.text-hover {
-    opacity: 0;
-    transition: opacity $transition-duration;
-
-    &:hover {
-        opacity: 1;
-        transition: opacity $transition-duration;
-    }
-}
-
 
 // SPECIFIC
 .nav-list, .header-block, .about-me-block, .my-projects-block {
@@ -71,43 +75,85 @@ button {
 }
 
 .navbar {
-    position: fixed;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+
     width: 100%;
     background-color: $dark-bg-color;
 }
 
 .nav-list {
+    display: flex;
     padding: $navlist-padding;
     text-align: left;
+    justify-content: space-between;
 }
 
 .nav-list-object {
     display: inline-block;
-    margin-left: $navlink-margin-left;
-
-    &:not(:last-child)::after {
-        content: "|";
-        margin-left: $navlink-margin-left;
-    }
+    font-size: $font-medium;
+    color: $light-bg-color;
 }
 
 .nav-list-link {
     color: $light-bg-color;
+    transition: color $transition-duration ease-in-out;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: $emphasis-color;
+
+        width: 0;
+        transition: width $transition-duration ease-in-out;
+    }
+
+    &:hover {
+        color: $emphasis-color;
+        transition: color $transition-duration ease-in-out;
+
+        &::after {
+            width: 100%;
+            transition: width $transition-duration ease-in-out;
+        }
+    }
 }
 
 .header {
     display: flex;
     align-items: center;
     height: $header-height;
-    background: url(../assets/bg.jpg) 100vw;
+    background: url(../assets/bg6.png) 0 75%/100%;
+    position: relative;
+    
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        // background-color: #00000077;
+        // z-index: 0;
+    }
 }
 
 .header-block {
-    border-left: 3px $title-color solid;
+    border-left: 3px $dark-bg-color solid;
+    color: $light-bg-color;
     text-align: left;
 }
 
 .header-content {
+    position: relative;
+    z-index: 1;
+
     margin: 5px 0 5px 40px;
 
     &.header-title {
@@ -139,7 +185,7 @@ button {
     font-size: $font-xl;
     text-align: left;
 
-    background-color: $dark-bg-color;
+    background-color: $title-color;
     padding: 8px 0 8px 30px;
 
     border-top-left-radius: 50px;
@@ -151,19 +197,25 @@ button {
 
 .about-me-image {
     position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
 
     .image {
-        width: 80%;
+        width: 50%;
         border-radius: 100%;
+        background-color: $caption-color;
 
-        -webkit-box-shadow: -50px -50px 0px 0px rgba(0,0,0,0.3);
-        -moz-box-shadow: -50px -50px 0px 0px rgba(0,0,0,0.3);
-        box-shadow: -50px -50px 0px 0px rgba(0,0,0,0.3);
+        -webkit-box-shadow: -50px -50px 0px 0px $caption-color;
+        -moz-box-shadow: -50px -50px 0px 0px $caption-color;
+        box-shadow: -50px -50px 0px 0px $caption-color;
+
+        align-self: center;
     }
 }
 
 .my-projects {
-    background-color: $dark-bg-color;
+    background-color: $title-color;
     color: $light-bg-color;
 }
 
@@ -209,24 +261,88 @@ button {
 .project-item {
     position: relative;
     max-height: 350px;
+    overflow: hidden;
     margin-bottom: 20px;
 
-    .text-hover {
-        color: $text-color;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    .title {
         position: absolute;
+        padding: $grid-item-padding;
+        top: 0;
+        right: 0;
         left: 0;
+        z-index: 2;
+
+        color: $light-bg-color;
+        font-size: $font-xl;
+        font-weight: $font-weight-normal;
+        text-align: left;
+        
+        &::after {
+            content: "";
+            width: 0;
+            height: 2px;
+            background-color: $light-bg-color;
+
+            display: block;
+            margin-top: 20px;
+
+            transition: width $transition-duration ease-in-out;
+        }
+    }
+
+    .text-hover {
+        color: $light-bg-color;
+        text-align: left;
+
+        position: absolute;
         right: 0;
         bottom: 0;
+        top: 0;
+        left: 0;
+        z-index: 1;
 
-        padding: $grid-padding;
+        padding: $grid-item-padding;
+        padding-top: 120px;
         background-color: $caption-color;
-    }
 
+        opacity: 0;
+        transition: opacity $transition-duration ease-in-out;
+    }
 
     img {
-        width: 100%;
         max-height: 100%;
+
+        align-self: center;
+
+        transform: scale(1.1);
+        transition: transform $transition-duration ease-in-out;
     }
+
+    &:hover {
+        cursor: pointer;
+
+        img {
+            transform: scale(1.1) translateX(10px);
+            transition: transform $transition-duration ease-in-out;
+        }
+
+        .text-hover {
+            opacity: 1;
+            transition: opacity $transition-duration ease-in-out;
+        }
+
+        .title {
+            &::after {
+                width: 100%;
+                transition: width $transition-duration ease-in-out;
+            }
+        }
+    }
+
 
     &.item-rect {
         width: 60%;
