@@ -57,13 +57,55 @@ button {
     color: $emphasis-color;
 }
 
+.link {
+    color: $light-bg-color;
+    transition: color $transition-duration ease-in-out;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: $title-color;
+
+        width: 0;
+        transition: width $transition-duration ease-in-out;
+    }
+
+    &:hover {
+        color: $title-color;
+        transition: color $transition-duration ease-in-out;
+
+        &::after {
+            width: 100%;
+            transition: width $transition-duration ease-in-out;
+        }
+    }
+}
+
 .paragraph {
     margin-bottom: 25px;
     text-align: justify;
 }
 
+.round-title-block {
+    position: absolute; 
+    text-align: left;
+
+    font-size: $font-xl;
+    padding: 8px 0 8px 30px;
+
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+
+    width: 35%;
+    right: 0;
+}
+
 // SPECIFIC
-.nav-list, .header-block, .about-me-block, .my-projects-block {
+.nav-list, .header-block, .about-me-block, .my-projects-block, .contact-block {
     margin: 0 auto;
     max-width: $full-width;
     width: $full-width;
@@ -96,39 +138,11 @@ button {
     color: $light-bg-color;
 }
 
-.nav-list-link {
-    color: $light-bg-color;
-    transition: color $transition-duration ease-in-out;
-    position: relative;
-
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 2px;
-        background-color: $emphasis-color;
-
-        width: 0;
-        transition: width $transition-duration ease-in-out;
-    }
-
-    &:hover {
-        color: $emphasis-color;
-        transition: color $transition-duration ease-in-out;
-
-        &::after {
-            width: 100%;
-            transition: width $transition-duration ease-in-out;
-        }
-    }
-}
-
 .header {
     display: flex;
     align-items: center;
     height: $header-height;
-    background: url(../assets/bg6.png) 0 75%/100%;
+    background: url(../assets/bg7.png) 0 10%/100%;
     position: relative;
     
     &::after {
@@ -170,29 +184,17 @@ button {
     flex-flow: row nowrap;
 }
 
+.about-me-title-block {
+    color: $light-bg-color;
+    background-color: $title-color;
+}
+
 .about-me-image, .about-me-text {
     flex: 1 0 50%; 
 }
 
 .about-me-content, .about-me-image {
-    padding-top: 70px;
-}
-
-.about-me-title-block {
-    position: absolute; 
-
-    color: $light-bg-color;
-    font-size: $font-xl;
-    text-align: left;
-
-    background-color: $title-color;
-    padding: 8px 0 8px 30px;
-
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-
-    width: 35%;
-    right: 0;
+    padding-top: 80px;
 }
 
 .about-me-image {
@@ -268,6 +270,8 @@ button {
     flex-flow: row nowrap;
     justify-content: center;
 
+    color: $light-bg-color;
+
     .title {
         position: absolute;
         padding: $grid-item-padding;
@@ -275,11 +279,10 @@ button {
         right: 0;
         left: 0;
         z-index: 2;
-
-        color: $light-bg-color;
         font-size: $font-xl;
         font-weight: $font-weight-normal;
         text-align: left;
+        transition: color $transition-duration;
         
         &::after {
             content: "";
@@ -292,25 +295,6 @@ button {
 
             transition: width $transition-duration ease-in-out;
         }
-    }
-
-    .text-hover {
-        color: $light-bg-color;
-        text-align: left;
-
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        top: 0;
-        left: 0;
-        z-index: 1;
-
-        padding: $grid-item-padding;
-        padding-top: 120px;
-        background-color: $caption-color;
-
-        opacity: 0;
-        transition: opacity $transition-duration ease-in-out;
     }
 
     img {
@@ -330,19 +314,21 @@ button {
             transition: transform $transition-duration ease-in-out;
         }
 
-        .text-hover {
+        .project-text {
             opacity: 1;
             transition: opacity $transition-duration ease-in-out;
         }
 
         .title {
+            color: $light-bg-color;
+            transition: color $transition-duration;
+
             &::after {
                 width: 100%;
                 transition: width $transition-duration ease-in-out;
             }
         }
     }
-
 
     &.item-rect {
         width: 60%;
@@ -356,4 +342,64 @@ button {
         width: 2%;
         background-color: $light-bg-color;
     }
+}
+
+.project-text {
+    color: $light-bg-color;
+    text-align: left;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    padding: $grid-item-padding;
+    padding-top: 120px;
+    background-color: $caption-color;
+
+    opacity: 0;
+    transition: opacity $transition-duration ease-in-out;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.project-caption {
+    font-style: italic;
+    position: absolute;
+    top: 70px;
+    font-size: $font-small;
+}
+
+.contact {
+    background-color: $dark-bg-color;
+}
+
+.contact-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: first baseline;
+
+    color: $light-bg-color;
+}
+
+.contact-title-block {
+    background-color: $light-bg-color;
+    color: $title-color;
+}
+
+.contact-infos {
+    text-align: justify;
+}
+
+.contact-info {
+    
+}
+
+.contact-content {
+    padding-top: 80px;
+    text-align: left;
 }

@@ -2,3 +2,5 @@
 bg3.jpg: Photo by Kristina Tamašauskaitė on Unsplash
 bg4.jpg: Photo by Caleb Woods on Unsplash
 bg5.jpg: Photo by Peter Clarkson on Unsplash
+bg6.png: Pixel Art Landscape Wallpaper FireWatch by Anglai9087 on DeviantArt https://www.deviantart.com/andlai9087/art/Pixel-Art-Landscape-Wallpaper-FireWatch-657577353
+bg7.png: Firewatch#1 by Zarosh @GuitarGuy on Pixilart https://www.pixilart.com/art/firewatch-1-9f195586bef909a
