@@ -1,0 +1,54 @@
+@import "./variables";
+
+.project-desc {
+  background-color: $light-bg-color;
+}
+
+.project-desc-block {
+  margin: 0 auto;
+  max-width: $full-width;
+  width: $full-width;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.project-desc-title-block {
+  color: $light-bg-color;
+  background-color: $title-color;
+}
+
+.project-skills-title-block {
+  width: 100%;
+  margin-bottom: -80px; // This is to counter the padding-top of project-desc-content.
+
+  text-align: center;
+  background-color: $light-bg-color;
+  color: $title-color;
+
+  .project-title::before, 
+  .project-title::after {
+    width: 35%;
+    background-color: $title-color;
+  }
+}
+
+.project-desc-image, .project-desc-text {
+  flex: 1 0 50%; 
+}
+
+.project-desc-content, .project-desc-image {
+  padding-top: 80px;
+}
+
+.project-desc-image {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
+  .image {
+      width: 80%;
+      background-color: $caption-color;
+      align-self: center;
+  }
+}

@@ -57,6 +57,10 @@ button {
     color: $emphasis-color;
 }
 
+.icon {
+    display: inline-block;
+}
+
 .link {
     color: $light-bg-color;
     transition: color $transition-duration ease-in-out;
@@ -86,8 +90,11 @@ button {
 }
 
 .paragraph {
-    margin-bottom: 25px;
     text-align: justify;
+
+    &:not(:last-child) {
+        margin-bottom: 25px;
+    }
 }
 
 .round-title-block {
@@ -102,6 +109,21 @@ button {
 
     width: 35%;
     right: 0;
+
+    &.left {
+        text-align: right;
+        padding: 8px 30px 8px 0;
+
+        left: 0;
+        right: auto;
+        
+
+
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
 }
 
 // SPECIFIC
@@ -391,12 +413,18 @@ button {
     color: $title-color;
 }
 
-.contact-infos {
+.contact-infos, .contact-text {
     text-align: justify;
+    flex: 1 0 50%;
 }
 
 .contact-info {
-    
+    margin-bottom: 7px;
+}
+
+.contact-icon {
+    height: $font-normal;
+    margin-right: 7px;
 }
 
 .contact-content {

@@ -4,3 +4,8 @@ bg4.jpg: Photo by Caleb Woods on Unsplash
 bg5.jpg: Photo by Peter Clarkson on Unsplash
 bg6.png: Pixel Art Landscape Wallpaper FireWatch by Anglai9087 on DeviantArt https://www.deviantart.com/andlai9087/art/Pixel-Art-Landscape-Wallpaper-FireWatch-657577353
 bg7.png: Firewatch#1 by Zarosh @GuitarGuy on Pixilart https://www.pixilart.com/art/firewatch-1-9f195586bef909a
+
+icons:
+map-pointer: <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+envelope: <div>Icons made by <a href="https://www.flaticon.com/authors/yannick" title="Yannick">Yannick</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+phone: <div>Icons made by <a href="https://www.flaticon.com/authors/zurb" title="Zurb">Zurb</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>

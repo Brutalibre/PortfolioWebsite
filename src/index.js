@@ -2,6 +2,7 @@
 require('normalize.css/normalize.css');
 require('./styles/index.scss');
 require('./styles/parallax.scss');
+require('./styles/responsive.scss');
 
 /*document.addEventListener("DOMContentLoaded", () => {
 

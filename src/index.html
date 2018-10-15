@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Val Isautier's Portfolio</title>
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="Val Isautier's Portfolio">
+    <meta name="Description" content="Hi, I'm Val and this is my Game Designer portfolio!"/>
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Val Isautier's Portfolio" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://lifenautjoe.github.io/webpack-starter-basic/" />
+    <meta property="og:image" content="https://i.snag.gy/i3eMBc.jpg" />
+    <meta property="og:description" content="Hi, I'm Val and this is my Game Designer portfolio!" />
+    <!-- Mobile header color for Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#7B3C3C">
+    <!-- Mobile header color Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#7B3C3C">
+    <!-- Mobile header color for iOS Safari (supports black, black-translucent or default) -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+</head>
+<body>
+    <div class="MainContainer">
+        
+        <%= require('html-loader!./partials/nav.html') %>
+
+        <header class="header ParallaxContainer">
+            <div class="header-block">
+                <div class="header-content header-title">Welcome! I'm Val.</div>
+                <div class="header-content header-description">I'm a junior Game and Level Designer.</div>
+                <button class="header-content header-button" id="DownloadCV">Download Resume</button>
+            </div>
+        </header>
+        <div class="about-me">
+            <div class="about-me-block body-block">
+                <div class="about-me-image">
+                    <img class="image" src="src/assets/portrait_small.png" />
+                </div>
+                <div class="about-me-text">
+                    <div class="round-title-block about-me-title-block">
+                        <div class="round-title about-me-title">
+                            Hello world!
+                        </div>
+                    </div>
+                    <div class="about-me-content">
+                        <p class="paragraph">My name is <span class="emphasis">Val Isautier</span> and I'm a Game Design student at CNAM-ENJMIN, graduating in 2019. I'm looking for a <span class="emphasis">6-month internship</span> as a <span class="emphasis">Game</span> or <span class="emphasis">Level Designer</span> starting in <span class="emphasis">March 2019.</span></p>
+                        <p class="paragraph">I'm a former <span class="emphasis">front-end web developer</span>, and I graduated from my engineering school, <span class="emphasis">ECE Paris</span>, in 2016. I have a strong background in web and software development, but Game Design has always been my true passion.</p>
+                        <p class="paragraph">Player experience is one of my main concerns. I want to create <span class="emphasis">emotions</span>, <span class="emphasis">sensations</span>, <span class="emphasis">memories</span>, and make the players <span class="emphasis">feel</span> by playing my games. </p>
+                        <p class="paragraph">By designing <span class="emphasis">levels</span>, <span class="emphasis">worlds</span> and <span class="emphasis">mechanics</span>, I aim to create <span class="emphasis">experiences</span> that will deeply touch the players.</p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="my-projects">
+            <div class="my-projects-block body-block">
+                <div class="project-title">
+                    My projects
+                </div>
+                <div class="projects-grid">
+                    <a href="#" class="project-item item-rect">
+                        <img src="src/assets/esd.png" />
+                        <p class="title">Every System Down</p>
+                        <div class="project-text text-hover">
+                            <p class="project-caption">Master 1 project (team of 5 students), 2018</p>
+                            <p class="desc">
+                                Trapped in the cockpit of a sinking submarine, your only hope lies in your complex, old-fashioned command panel. Guide your colleague through the ship, help them restore the engines and the pressure, but beware: if they die, you die with them.
+                            </p>
+                            <p class="desc">
+                                <b>My work:</b> Unity and Arduino programming, Game Design (mechanics, physical device), Level Design, Narrative Design.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="project-item item-square">
+                        <img src="src/assets/square.png" />
+                        <p class="title">Noche de Alebrijes</p>
+                        <div class="project-text text-hover">
+                            <p class="project-caption">Half-year project (team of 9 students), 2018</p>
+                            <p class="desc">
+                                This colorful 2D shoot'em up is also a rhythm game: follow the tempo to shoot your enemies for the maximum bonus!
+                            </p>
+                            <p class="desc">
+                                <b>My work:</b> Brainstorming and pitch, Game Design (mechanics, balancing).
+                            </p>
+                        </div>
+                    </a>
+                    <div class="project-item item-fill"></div>
+                    
+                    <div class="breaker"></div>
+
+                    <div class="project-item item-fill"></div>
+                    <a href="#" class="project-item item-square">
+                        <img src="src/assets/sieste.png" />
+                        <p class="title">Nap Simulator</p>
+                        <div class="project-text text-hover">
+                            <p class="project-caption">Class project (team of 3 students), 2017</p>
+                            <p class="desc">
+                                Manage your napping time while the teacher is not too close. If you're asleep when he's nearby, you lose! And beware of sleep deprivation...
+                            </p>
+                            <p class="desc">
+                                <b>My work:</b> Game Design (pitch, mechanics), Processing programming.
+                            </p>                        
+                        </div>
+                    </a>
+                    <a href="#" class="project-item item-rect">
+                        <img src="src/assets/doom.png" />
+                        <p class="title">Doom Level</p>
+                        <div class="project-text text-hover">
+                                <p class="project-caption">Level Design class project (solo), 2017</p>
+                            <p class="desc">
+                                This is a custom Doom II Level, made with GZDoom Builder. <br/>You're a prisonner in some sort of lab, but what the hell happened here??
+                            </p>
+                            <p class="desc">
+                                <b>My work:</b> Level Design (world building, difficulty management), Narrative Design (storytelling withing the level).
+                            </p>                        
+                        </div>
+                    </a>
+                    
+                    <div class="breaker"></div>
+
+                    <a href="/panem.html" class="project-item item-rect">
+                        <img src="src/assets/panem.png" />
+                        <p class="title emphasis">Panem & Circences</p>
+                        <div class="project-text text-hover">
+                            <p class="project-caption">Entry for ENJMIN application contest, 2017</p>
+                            <p class="desc">
+                                This 2 to 4-player tabletop game is based on the novel <i><u>Discourse on Voluntary Servitude</u></i> by Etienne de La Boétie. The Monarch tries to keep the city under their control with brothels and games, while the Citizen(s) stir up the revolution by educating the people.
+                            </p>
+                            <p class="desc">
+                                <b>My work:</b> Original idea, mechanics, playtests, documents redaction.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="#" class="project-item item-square">
+                        <img src="src/assets/gray.png" />
+                        <div class="title emphasis">Gray's Adventure </div>
+                        
+                        <div class="project-text text-hover">
+                            <p class="project-caption">Entry for Game à Niaque, 2015</p>
+                            <p class="desc">
+                                Help Gray free the seven colors in this difficult platformer. Navigate through the levels, explore the world and don't lose your temper to beat the game!
+                            </p>
+                            <p class="desc">
+                                <b>My work:</b> Original idea, mechanics, Level Design, Unity programming.
+                            </p>
+                        </div>
+                    </a>
+                    <div class="project-item item-fill"></div>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="contact-block body-block">
+                <div class="contact-infos">
+                    <div class="contact-info">
+                        <img class="icon contact-icon" src="./src/assets/icons/phone-receiver.svg" />
+                        <span class="emphasis">Phone: </span><span class="desktop-only">+33 6 26 41 40 99</span><a class="link mobile-only" href="tel:+33626414099">+33 6 26 41 40 99</a>
+                    </div>
+                    <div class="contact-info">
+                        <img class="icon contact-icon" src="./src/assets/icons/map-pointer.svg" />
+                        <span class="emphasis">Location:</span> Angoulême (but I'm mobile!)
+                    </div>
+                    <div class="contact-info">
+                        <img class="icon contact-icon" src="./src/assets/icons/close-envelope.svg" />
+                        <span class="emphasis">Mail:</span> <a class="link" href="mailto:val.isautier@gmail.com">val.isautier@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-text">
+                    <div class="round-title-block contact-title-block">
+                        <p>Contact me!</p>
+                    </div>
+                    <div class="contact-content"><p>Looking for a highly-motivated, dynamic and competent intern? </p>
+                    <p>I'm available from March 2018 for a 6-month internship in France, Europe or even abroad !</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
