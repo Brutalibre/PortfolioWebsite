@@ -1,0 +1,13 @@
+@import "./colors.scss";
+@import "../styles/variables.scss";
+@import "../styles/main.scss";
+@import "../styles/projects.scss";
+
+.header-nap {
+  background: url('../assets/nap-bg.png') 0 0%/100%;
+
+  .header-block {
+    color: $dark-bg-color;
+    margin-bottom: 220px;
+  }
+}

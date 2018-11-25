@@ -4,6 +4,7 @@ require('./styles/index.scss');
 require('./styles/parallax.scss');
 require('./styles/responsive.scss');
 
+
 /*document.addEventListener("DOMContentLoaded", () => {
 
     const pluginsTriggerElement = document.getElementById('plugins-trigger');

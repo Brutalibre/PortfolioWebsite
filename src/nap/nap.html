@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Val Isautier's Portfolio</title>
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="Val Isautier's Portfolio">
+    <meta name="Description" content="Hi, I'm Val and this is my Game Designer portfolio!"/>
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Val Isautier's Portfolio" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://lifenautjoe.github.io/webpack-starter-basic/" />
+    <meta property="og:image" content="https://i.snag.gy/i3eMBc.jpg" />
+    <meta property="og:description" content="Hi, I'm Val and this is my Game Designer portfolio!" />
+    <!-- Mobile header color for Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#7B3C3C">
+    <!-- Mobile header color Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#7B3C3C">
+    <!-- Mobile header color for iOS Safari (supports black, black-translucent or default) -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+</head>
+<body>
+    <div class="MainContainer">
+        
+        <%= require('html-loader!../partials/nav-inv.html') %>
+
+        <%= require('html-loader!./partials/project.html') %>
+
+        
+    </div>
+  </body>
+</html>

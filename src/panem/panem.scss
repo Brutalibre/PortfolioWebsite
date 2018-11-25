@@ -1,4 +1,8 @@
+@import "./colors.scss";
+@import "../styles/variables.scss";
+@import "../styles/main.scss";
+@import "../styles/projects.scss";
 
 .header-panem {
-  background: url('../assets/panem-bg.png') 0 10%/100%;
+  background: url('../assets/panem-bg.jpg') 0 0%/100%;
 }

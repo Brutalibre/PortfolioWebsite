@@ -6,7 +6,13 @@ module.exports = {
     devtool: 'eval-cheap-module-source-map',
     entry: {
         index: './src/index.js',
-        panem: './src/panem/panem.js'
+        panem: './src/panem/panem.js',
+        gray: './src/gray/gray.js',
+        doom: './src/doom/doom.js',
+        nap: './src/nap/nap.js',
+        noche: './src/noche/noche.js',
+        esd: './src/esd/esd.js',
+        peak: './src/peak/peak.js'
     },
     devServer: {
         port: 8080,
@@ -80,6 +86,42 @@ module.exports = {
             inject: true,
             chunks: ['panem'],
             filename: 'panem.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/gray/gray.html',
+            inject: true,
+            chunks: ['gray'],
+            filename: 'gray.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/doom/doom.html',
+            inject: true,
+            chunks: ['doom'],
+            filename: 'doom.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/nap/nap.html',
+            inject: true,
+            chunks: ['nap'],
+            filename: 'nap.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/noche/noche.html',
+            inject: true,
+            chunks: ['noche'],
+            filename: 'noche.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/esd/esd.html',
+            inject: true,
+            chunks: ['esd'],
+            filename: 'esd.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/peak/peak.html',
+            inject: true,
+            chunks: ['peak'],
+            filename: 'peak.html'
         })
     ]
 };
