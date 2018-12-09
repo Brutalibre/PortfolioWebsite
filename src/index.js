@@ -20,3 +20,23 @@ require('./styles/responsive.scss');
 document.getElementById("DownloadCV").onclick = () => {
     console.log("clicked!")
 }
+
+console.log(window.location.pathname);
+
+document.getElementById("LinkAbout").onclick = () => {
+    document.querySelector('#AboutMe').scrollIntoView({ 
+        behavior: 'smooth' 
+    });
+}
+
+document.getElementById("LinkProjects").onclick = () => {
+    document.querySelector('#MyProjects').scrollIntoView({ 
+        behavior: 'smooth' 
+    });
+}
+
+document.getElementById("LinkContact").onclick = () => {
+    document.querySelector('#Contact').scrollIntoView({ 
+        behavior: 'smooth' 
+    });
+}
