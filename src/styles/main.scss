@@ -69,7 +69,6 @@ button {
 }
 
 .emphasis {
-  font-weight: $font-weight-normal;
   color: $emphasis-color;
 }
 
@@ -81,6 +80,10 @@ button {
   // color: $light-bg-color;
   transition: color $transition-duration ease-in-out;
   position: relative;
+
+  &.emphasis {
+    font-weight: $font-weight-normal;
+  }
 
   &.inverted {
     &::after {
