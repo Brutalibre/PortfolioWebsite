@@ -12,11 +12,11 @@ function ZoomOnImage (item) {
 
 
   // Check if user has clicked on the <img> or on the <a>. We need the <img> tag.
-  if (item.tagName == "IMG") {
+  if (item.classList.contains == "image") {
     img = e.target;
   }
   else {
-    img = item.getElementsByTagName('img')[0];
+    img = item.getElementsByClassName('image')[0];
   }
 
   // Change the "isZoomed" boolean to toggle <img> width and height.
