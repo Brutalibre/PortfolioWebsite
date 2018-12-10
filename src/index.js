@@ -3,38 +3,28 @@ require('normalize.css/normalize.css');
 require('./styles/index.scss');
 require('./styles/parallax.scss');
 
-
-/*document.addEventListener("DOMContentLoaded", () => {
-
-    const pluginsTriggerElement = document.getElementById('plugins-trigger');
-    const pluginsElement = document.getElementById('plugins');
-
-    const pluginsVisibleClass = "splash-overview-plugins__list--visible";
-
-    pluginsTriggerElement.onclick = () => {
-        pluginsElement.classList.toggle(pluginsVisibleClass);
-    }
-});*/
-
 document.getElementById("DownloadCV").onclick = () => {
     console.log("clicked!")
 }
 
 console.log(window.location.pathname);
 
-document.getElementById("LinkAbout").onclick = () => {
+document.getElementById("LinkAbout").onclick = e => {
+    e.preventDefault();
     document.querySelector('#AboutMe').scrollIntoView({ 
         behavior: 'smooth' 
     });
 }
 
-document.getElementById("LinkProjects").onclick = () => {
+document.getElementById("LinkProjects").onclick = e => {
+    e.preventDefault();
     document.querySelector('#MyProjects').scrollIntoView({ 
         behavior: 'smooth' 
     });
 }
 
-document.getElementById("LinkContact").onclick = () => {
+document.getElementById("LinkContact").onclick = e => {
+    e.preventDefault();
     document.querySelector('#Contact').scrollIntoView({ 
         behavior: 'smooth' 
     });
