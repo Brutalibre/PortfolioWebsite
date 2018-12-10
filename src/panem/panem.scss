@@ -2,7 +2,18 @@
 @import "../styles/variables.scss";
 @import "../styles/main.scss";
 @import "../styles/projects.scss";
+@import "../styles/responsive.scss";
 
 .header-panem {
-  background: url('../assets/panem-bg.jpg') 0 0%/100%;
+  background: url('../assets/panem-bg.jpg') 0 0%/cover;
+}
+
+
+
+@media screen and (max-device-width: 960px) {
+  .header-panem {
+    background: url('../assets/panem-bg.jpg');
+    background-position: 45% 10vh;
+    background-size: cover;
+  }
 }

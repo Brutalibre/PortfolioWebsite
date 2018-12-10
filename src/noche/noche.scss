@@ -2,7 +2,18 @@
 @import "../styles/variables.scss";
 @import "../styles/main.scss";
 @import "../styles/projects.scss";
+@import "../styles/responsive.scss";
 
 .header-noche {
-  background: url('../assets/noche-bg.png') 0 0%/100%;
+  background: url('../assets/noche-bg.png');
+  background-position: 0% 30vh;
+  background-size: cover;
+}
+
+@media screen and (max-device-width: 960px) {
+  .header-noche {
+    background: url('../assets/noche-bg.png');
+    background-position: 30% 30vh;
+    background-size: cover;
+  }
 }

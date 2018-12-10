@@ -2,7 +2,15 @@
 @import "../styles/variables.scss";
 @import "../styles/main.scss";
 @import "../styles/projects.scss";
+@import "../styles/responsive.scss";
 
 .header-esd {
-  background: url('../assets/esd_bg.png') 0 0%/100%;
+  background: url('../assets/esd_bg.png') 0 -200%/cover;
+}
+
+
+@media screen and (max-device-width: 960px) {
+  .header-esd {
+    background: url('../assets/esd.png') 35% 0%/cover;
+  }
 }

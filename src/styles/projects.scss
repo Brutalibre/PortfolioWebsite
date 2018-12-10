@@ -44,6 +44,10 @@
   flex-flow: column;
   justify-content: center;
 
+  &.image-zoom {
+    display: block;
+  }
+
   &.top {
     justify-content: flex-start;
   }

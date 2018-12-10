@@ -30,13 +30,13 @@
             <div class="header-block">
                 <div class="header-content header-title">Welcome! I'm Val.</div>
                 <div class="header-content header-description">I'm a junior Game and Level Designer.</div>
-                <button class="header-content header-button" id="DownloadCV">Download Resume</button>
+                <a href="src/assets/ResumeEN.pdf" download="ValIsautier-Resume.pdf" class="header-content header-button button" id="DownloadCV">Download Resume</a>
             </div>
         </header>
         <div class="about-me" id="AboutMe">
             <div class="about-me-block body-block">
                 <div class="about-me-image">
-                    <img class="image" src="src/assets/portrait_small.png" />
+                    <img class="image" src="src/assets/portrait_small.png" alt="Val's portrait" />
                 </div>
                 <div class="about-me-text">
                     <div class="round-title-block about-me-title-block">
@@ -60,7 +60,7 @@
                 </div>
                 <div class="projects-grid">
                 <a href="/peak.html" class="project-item">
-                        <img src="src/assets/peak.png" />
+                        <img src="src/assets/peak.png" alt="Drawing of a protagonist on a low-tech windsurf, gliding on a jade and red sand mountain." />
                         <p class="title">Peak</p>
                         <div class="project-text text-hover">
                             <p class="project-caption">Master 2 project (team of 11 students), 2018/2019</p>
@@ -73,7 +73,7 @@
                         </div>
                     </a>
                     <a href="/esd.html" class="project-item item-rect">
-                        <img src="src/assets/esd.png" />
+                        <img src="src/assets/esd.png" alt="The text Every System Down is written in a console with a caret" />
                         <p class="title">Every System Down</p>
                         <div class="project-text text-hover">
                             <p class="project-caption">Master 1 project (team of 5 students), 2018</p>
@@ -86,7 +86,7 @@
                         </div>
                     </a>
                     <a href="/noche.html" class="project-item item-square">
-                        <img src="src/assets/square.png" />
+                        <img src="src/assets/square.png" alt="Drawing of a blue and yellow fantasy rabbit" />
                         <p class="title">Noche de Alebrijes</p>
                         <div class="project-text text-hover">
                             <p class="project-caption">Half-year project (team of 9 students), 2018</p>
@@ -98,13 +98,13 @@
                             </p>
                         </div>
                     </a>
-                    <div class="project-item item-fill"></div>
+                    <div class="project-item item-fill desktop-only"></div>
                     
                     <div class="breaker"></div>
 
-                    <div class="project-item item-fill"></div>
+                    <div class="project-item item-fill desktop-only"></div>
                     <a href="/nap.html" class="project-item item-square">
-                        <img src="src/assets/sieste.png" />
+                        <img src="src/assets/sieste.png" alt="Nap Simulator 2017 Enjmin Edition" />
                         <p class="title">Nap Simulator</p>
                         <div class="project-text text-hover">
                             <p class="project-caption">Class project (team of 3 students), 2017</p>
@@ -117,7 +117,7 @@
                         </div>
                     </a>
                     <a href="/doom.html" class="project-item item-rect">
-                        <img src="src/assets/doom.png" />
+                        <img src="src/assets/doom.png" alt="Doom 2 map" />
                         <p class="title">Doom Level</p>
                         <div class="project-text text-hover">
                                 <p class="project-caption">Level Design class project (solo), 2017</p>
@@ -133,8 +133,9 @@
                     <div class="breaker"></div>
 
                     <a href="/panem.html" class="project-item item-rect">
-                        <img src="src/assets/panem.png" />
-                        <p class="title emphasis">Panem & Circences</p>
+                        <img src="src/assets/panem.png" alt="Panem et Circences" />
+                        <p class="title emphasis desktop-only">Panem & Circences</p>
+                        <p class="title mobile-only">Panem & Circences</p>
                         <div class="project-text text-hover">
                             <p class="project-caption">Entry for ENJMIN application contest, 2017</p>
                             <p class="desc">
@@ -146,8 +147,10 @@
                         </div>
                     </a>
                     <a href="/gray.html" class="project-item item-square">
-                        <img src="src/assets/gray.png" />
-                        <div class="title emphasis">Gray's Adventure </div>
+                        <img src="src/assets/gray.png" alt="The text Gray's Adventure with a gray square, dark platforms and spikes, a red 3D box and red platforms in the ground." />
+                        <div class="title emphasis desktop-only">Gray's Adventure </div>
+                        <div class="title mobile-only">Gray's Adventure </div>
+
                         
                         <div class="project-text text-hover">
                             <p class="project-caption">Entry for Game à Niaque, 2015</p>
@@ -159,7 +162,7 @@
                             </p>
                         </div>
                     </a>
-                    <div class="project-item item-fill"></div>
+                    <div class="project-item item-fill desktop-only"></div>
                 </div>
             </div>
         </div>
@@ -168,15 +171,15 @@
                 <div class="contact-infos">
                     <div class="contact-info">
                         <img class="icon contact-icon" src="./src/assets/icons/phone-receiver.svg" />
-                        <span class="emphasis">Phone: </span><span class="desktop-only">+33 6 26 41 40 99</span><a class="link mobile-only" href="tel:+33626414099">+33 6 26 41 40 99</a>
+                        <span class="emphasis">Phone: </span><span class="desktop-only emphasis">+33 6 26 41 40 99</span><a class="link emphasis mobile-only" href="tel:+33626414099">+33 6 26 41 40 99</a>
                     </div>
                     <div class="contact-info">
                         <img class="icon contact-icon" src="./src/assets/icons/map-pointer.svg" />
-                        <span class="emphasis">Location:</span> Angoulême (but I'm mobile!)
+                        <span class="emphasis">Location:</span> Angoulême (willing to relocate!)
                     </div>
                     <div class="contact-info">
                         <img class="icon contact-icon" src="./src/assets/icons/close-envelope.svg" />
-                        <span class="emphasis">Mail:</span> <a class="link" href="mailto:val.isautier@gmail.com">val.isautier@gmail.com</a>
+                        <span class="emphasis">Mail:</span> <a class="link emphasis" href="mailto:val.isautier@gmail.com">val.isautier@gmail.com</a>
                     </div>
                 </div>
                 <div class="contact-text">

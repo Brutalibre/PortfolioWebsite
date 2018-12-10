@@ -2,12 +2,21 @@
 @import "../styles/variables.scss";
 @import "../styles/main.scss";
 @import "../styles/projects.scss";
+@import "../styles/responsive.scss";
 
 .header-nap {
-  background: url('../assets/nap-bg.png') 0 0%/100%;
+  background: url('../assets/nap-bg.png') 0 0%/cover;
 
   .header-block {
     color: $dark-bg-color;
     margin-bottom: 220px;
+  }
+}
+
+@media screen and (max-device-width: 960px) {
+  .header-nap {
+    background: url('../assets/nap-bg.png');
+    background-position: 30% 7vh;
+    background-size: cover;
   }
 }
