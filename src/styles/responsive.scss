@@ -1,7 +1,7 @@
 // MOBILE DISPLAY
 @media screen and (max-device-width: 960px) {
   .desktop-only {
-    display: none;
+    display: none !important;
   }
 
   // UTILS
@@ -230,6 +230,6 @@
 // DESKTOP DISPLAY
 @media screen and (min-device-width: 961px) {
   .mobile-only {
-    display: none;
+    display: none !important;
   }
 }
