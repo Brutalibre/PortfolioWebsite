@@ -262,6 +262,8 @@ li {
 
   margin: 5px 0 5px 40px;
 
+  text-shadow: $dark-bg-color 1px 0 5px;
+
   &.header-title {
       font-size: $font-xxl;
   }
