@@ -1,3 +1,5 @@
+// @import "./parallax.scss";
+
 // BASE ITEMS
 html, body {
   height: 100%;
@@ -47,7 +49,7 @@ li {
 .button {
   display: inline-block;
 
-  color: $light-bg-color;
+  color: $dark-bg-color;
   font-weight: $font-weight-thin;
 
   border: 1px solid;
@@ -61,6 +63,7 @@ li {
 
   &:hover, &:focus {
       cursor: pointer;
+      color: $light-bg-color;
       background: $button-color-opaque;
       border-color: $light-bg-color;
       transition: background-color $transition-duration ease-in-out, border-color $transition-duration ease-in-out;
@@ -120,7 +123,6 @@ li {
 }
 
 .link {
-  // color: $light-bg-color;
   transition: color $transition-duration ease-in-out;
   position: relative;
 
@@ -234,7 +236,7 @@ li {
   display: flex;
   align-items: center;
   height: $header-height;
-  background: url(../assets/bg7.png) 0 10%/100%;
+  background: url(../assets/bg8.jpg) 0 60%/100%;
   position: relative;
   
   &::after {
@@ -244,15 +246,12 @@ li {
       right: 0;
       bottom: 0;
       left: 0;
-
-      // background: #00000077;
-      // z-index: 0;
   }
 }
 
 .header-block {
   border-left: 3px $dark-bg-color solid;
-  color: $light-bg-color;
+  color: $dark-bg-color;
   text-align: left;
 }
 
@@ -262,11 +261,16 @@ li {
 
   margin: 5px 0 5px 40px;
 
-  text-shadow: $dark-bg-color 1px 0 5px;
-
   &.header-title {
       font-size: $font-xxl;
   }
+}
+
+.header-copyright {
+  position: absolute;
+  right: 0;
+  font-size: $font-small;
+  padding: $button-padding;
 }
 
 .about-me {
